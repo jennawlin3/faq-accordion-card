@@ -86,6 +86,7 @@ body::after {
     display: inline-block;
     font-weight: 300;
     width: 80%;
+    font-size: 1.1rem;
 }
 
 .title:hover {
@@ -134,10 +135,9 @@ body::after {
 
     .container {
         flex-direction: row;
-        width: 90vw;
+        width: 80vw;
         gap: 30px;
         align-items: center;
-        padding: 50px 40px;
         margin: 0;
     }
 
@@ -146,11 +146,31 @@ body::after {
     }
 
     .hero {
-        width: 50vw;
-        transform: translateX(-70px);
+        width: 100%;
+        transform: translateX(-100px);
+        position: static;
         align-self: center;
         margin-top: 0;
         filter: drop-shadow(0px 102px 2px #af67e91f);
+        z-index: 1;
+    } 
+    
+    picture {
+        position: relative;
+        width: 500px;
+        height: 421px;
+    } 
+    
+    picture source::after {
+        content: "";
+        background: url(../images/illustration-box-desktop.svg);
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        z-index: 999;
+        background-repeat: no-repeat;
+        top: 120px;
+        left: -180px;
     }
 
     .container h1 {
@@ -166,14 +186,11 @@ body::after {
 @media screen and (min-width:1300px) {
 
     .container {
-        max-width: 1200px;
+        max-width: 1000px;
     }
 
-    .hero {
-        width: 550px;
-    }
 
     .content-container {
-        width: 600px;
+        width: 400px;
     }
 }
