@@ -159,6 +159,19 @@ body::after {
         position: relative;
         width: 500px;
         height: 421px;
+    }
+    
+    picture source::before {
+        content: "";
+        background: url(../images/bg-pattern-desktop.svg);
+        position: absolute;
+        width: 500px;
+        height: 100%;
+        z-index: 0;
+        background-repeat: no-repeat;
+        top: -40px;
+        transform: rotate(180deg);
+        right: 40px;
     } 
     
     picture source::after {
