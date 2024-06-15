@@ -47,6 +47,7 @@ body::after {
     border-radius: 25px;
     padding: 40px;
     margin-top: 200px;
+    box-shadow: 2px 5px 25px var(--very-dark-grayish-blue);
 }
 
 .hero {
